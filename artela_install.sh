@@ -15,7 +15,8 @@ cd $HOME
 rm -rf artela
 git clone https://github.com/artela-network/artela
 
-#ДОБАВИТЬ СКАЧКУ БИНАРНИКА
+wget http://148.251.0.93:13285/artelad && mv artelad /root/go/bin/
+chmod +x /root/go/bin/artelad
 
 /root/go/bin/artelad config node tcp://localhost:2${random_am}57
 /root/go/bin/artelad config chain-id artela_11822-1
