@@ -66,6 +66,8 @@ if curl -s --head curl https://server-4.itrocket.net/testnet/artela/artela_2024-
   echo "no snapshot founded"
 fi
 
+rm artela_install.sh
+
 sudo systemctl daemon-reload
 sudo systemctl enable artelad
 sudo systemctl restart artelad && sudo journalctl -u artelad -f
